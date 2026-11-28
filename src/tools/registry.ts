@@ -17,6 +17,7 @@ import { listWorkoutActivities } from './workout-activities.js';
 import { getWorkoutActivityDetails, getWorkoutSummary } from './workout-activity-details.js';
 import { getSuggestedWeights } from './suggested-weights.js';
 import { getLibraryProgram, getLibraryWorkout, searchProgramLibrary, searchWorkoutLibrary } from './library.js';
+import { historyTools } from './history.js';
 
 const setDetailsSchema = {
   type: 'array',
@@ -726,6 +727,11 @@ export const toolCategories: ToolCategory[] = [
     name: 'library',
     description: "Tonal's published guided workouts and programs",
     tools: libraryTools,
+  },
+  {
+    name: 'history',
+    description: 'Complete history from a local tonal-export folder (only when TONAL_HISTORY_DIR is set)',
+    tools: historyTools,
   },
 ];
 
